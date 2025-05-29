@@ -1,7 +1,6 @@
 // 📁 src/pages/user/UserForum.tsx
 import { useEffect, useState } from "react";
 import api from "../../api/axios";
-import { useNavigate } from "react-router-dom";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import Pagination from "../../components/General/Pagination";
@@ -16,7 +15,6 @@ function UserForum() {
   const [page, setPage] = useState(1);
   const ITEMS_PER_PAGE = 3;
 
-  const navigate = useNavigate();
 
   useEffect(() => {
     AOS.init({ duration: 600, once: true });
