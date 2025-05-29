@@ -17,7 +17,7 @@ function AdminDashboard() {
   });
 
   const [notifications, setNotifications] = useState<any[]>([]);
-  const [readNotifications, setReadNotifications] = useState<any[]>([]);
+  const [setReadNotifications] = useState<any[]>([]);
 
   useEffect(() => {
     fetchStatistics();
