@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import api from "../../api/axios";
-import resultsImage from "/images/results.png";
 import Dropdown from "../../components/General/Dropdown";
 import Pagination from "../../components/General/Pagination";
 import Chart from "../../components/General/Chart";
