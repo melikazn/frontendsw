@@ -1,13 +1,4 @@
-// Props: formulärfältens värden och tillstånd för laddning och statusmeddelande
-interface Props {
-  subject: string;
-  setSubject: (value: string) => void;
-  message: string;
-  setMessage: (value: string) => void;
-  onSubmit: () => void;
-  loading: boolean;
-  status: string | null;
-}
+
 interface Props {
   subject: string;
   setSubject: (val: string) => void;
