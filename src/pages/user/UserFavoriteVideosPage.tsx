@@ -42,12 +42,6 @@ function UserFavoriteVideos() {
     }
   };
 
-  const resetFilters = () => {
-    setSearchTerm("");
-    setLetterFilter("");
-    setLevelFilter("");
-    setCurrentPage(1);
-  };
 
   const filteredVideos = videos.filter(v =>
     (!searchTerm || v.title.toLowerCase().includes(searchTerm.toLowerCase())) &&
