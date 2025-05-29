@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import api from "../../api/axios";
-import { useNavigate } from "react-router-dom";
 import SearchInput from "../../components/General/SearchInput";
 import Pagination from "../../components/General/Pagination";
 
@@ -12,7 +11,7 @@ function AdminForum() {
   const [currentPage, setCurrentPage] = useState(1);
   const [replyInputs, setReplyInputs] = useState<{ [key: number]: string }>({});
   const postsPerPage = 5;
-  const navigate = useNavigate();
+
 
   useEffect(() => {
     fetchPosts();
