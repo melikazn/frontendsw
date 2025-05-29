@@ -1,7 +1,5 @@
-// 📁 src/pages/user/UserMessageOverviewPage.tsx
 import { useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
-import messageImage from "/images/sendmail.png";
 
 function UserMessageOverviewPage() {
   const navigate = useNavigate();
@@ -13,10 +11,8 @@ function UserMessageOverviewPage() {
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5 }}
     >
-
-
       <motion.img
-        src={messageImage}
+        src="/images/sendmail.png"
         alt="Meddelande"
         className="mx-auto w-28 h-28 sm:w-40 sm:h-40 md:w-48 md:h-48 object-contain mb-8"
         initial={{ scale: 0.8, opacity: 0 }}
