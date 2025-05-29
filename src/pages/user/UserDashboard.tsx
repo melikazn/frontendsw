@@ -17,7 +17,7 @@ function UserDashboardPage() {
   const [passedTests, setPassedTests] = useState<TestResult[]>([]);
   const [failedTests, setFailedTests] = useState<TestResult[]>([]);
   const [notifPage, setNotifPage] = useState(1);
-  const [notifTotalPages, setNotifTotalPages] = useState(1);
+
 
   useEffect(() => {
     AOS.init({ duration: 800, once: true });
@@ -39,7 +39,7 @@ function UserDashboardPage() {
       setNotifications(notifData.filter((n: Notification) => n.is_read === 0));
       setReadNotifications(notifData.filter((n: Notification) => n.is_read === 1));
       setNotifPage(notifRes.data.page || 1);
-      setNotifTotalPages(notifRes.data.totalPages || 1);
+
     } catch (err) {
       console.error("Fel vid hämtning av notiser/profil:", err);
     }
@@ -105,8 +105,23 @@ function UserDashboardPage() {
 
         <NotificationsList notifications={notifications} onMarkAsRead={markAsRead} />
 
-        <PassedTestsList tests={passedTests} />
+        {readNotifications.length > 0 && (
+          <section className="mt-10">
+            <h3 className="text-xl font-semibold mb-4">📁 Tidigare lästa notifikationer</h3>
+            <ul className="space-y-2">
+              {readNotifications.map((n) => (
+                <li key={n.id} className="text-sm text-gray-500 border-b pb-2">
+                  🗂 {n.message}
+                  <span className="block text-xs text-gray-400">
+                    📅 {new Date(n.created_at).toLocaleString()}
+                  </span>
+                </li>
+              ))}
+            </ul>
+          </section>
+        )}
 
+        <PassedTestsList tests={passedTests} />
         <FailedTestsList tests={failedTests} />
       </div>
     </main>
