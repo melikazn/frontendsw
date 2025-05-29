@@ -81,7 +81,7 @@ function UserTestResults() {
       transition={{ duration: 0.5 }}
     >
       <img
-        src={resultsImage}
+      src="/images/results.png"
         alt="Resultat"
         className="mx-auto w-64 h-64 sm:w-80 sm:h-80 md:w-96 md:h-96 object-contain mb-6"
         data-aos="flip-left"
