@@ -10,7 +10,7 @@ interface Props {
 const levels = ["A1", "A2", "B1", "B2", "C1"];
 
 // Komponent för att välja nivå
-const LevelSelector = ({ level, onChange = "Välj nivå", showAllOption = true }: Props) => {
+const LevelSelector = ({ level, onChange, showAllOption = true }: Props) => {
   return (
     <div className="flex flex-wrap justify-center gap-4">
       {/* "Alla nivåer"-knapp */}
