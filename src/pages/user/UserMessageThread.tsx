@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
-import { motion } from "framer-motion";
 import api from "../../api/axios";
 import MessageReplyThread from "../../components/Messages/MessageReplyThread";
 import ReplyInput from "../../components/Messages/ReplyInput";
