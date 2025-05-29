@@ -8,6 +8,7 @@ function UserCategoryList() {
   const navigate = useNavigate();
   const { level } = useParams();
   const [categories, setCategories] = useState<any[]>([]);
+  const [selectedId, setSelectedId] = useState<number | null>(null);
   const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
@@ -25,6 +26,7 @@ function UserCategoryList() {
   };
 
   const handleSelect = (categoryId: number) => {
+    setSelectedId(categoryId);
     navigate(`/dashboard/tests/${level}/${categoryId}/sections`);
   };
 
@@ -55,7 +57,11 @@ function UserCategoryList() {
 
       {error && <p className="text-red-600 mb-6">{error}</p>}
 
-      <CategorySelector categories={categories} onSelect={handleSelect} />
+      <CategorySelector
+        categories={categories}
+        onSelect={handleSelect}
+        selectedId={selectedId}
+      />
     </motion.div>
   );
 }
