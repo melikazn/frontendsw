@@ -34,6 +34,11 @@ function UserSectionList() {
     }
   };
 
+  const handleSelectSection = (sectionId: number) => {
+    console.log("Vald sektion:", sectionId);
+    // Här kan du t.ex. navigera vidare eller visa detaljer om du vill
+  };
+
   return (
     <motion.div
       className="max-w-screen-xl mx-auto px-4 py-16 mt-[100px] text-[#00296b]"
@@ -59,6 +64,7 @@ function UserSectionList() {
       <SectionSelector
         sections={sections}
         onStartTest={(testId) => navigate(`/dashboard/tests/${testId}/start`)}
+        onSelectSection={handleSelectSection}
       />
     </motion.div>
   );
