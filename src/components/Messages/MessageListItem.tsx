@@ -1,23 +1,21 @@
 // Importerar motion för animering och useNavigate för routing
 import { motion } from "framer-motion";
-import { useNavigate } from "react-router-dom";
 
-// Props: ett meddelande och dess position i listan
+// Props: ett meddelande, klickfunktion och animationsfördröjning
 interface Props {
-  message: any;      
-  index: number;     
+  message: any;
+  onClick: () => void;
+  delay?: number;
 }
 
 // Visar ett meddelande i listan, med animation och klickbar routing
-const MessageListItem = ({ message, index }: Props) => {
-  const navigate = useNavigate();
-
+const MessageListItem = ({ message, onClick, delay = 0 }: Props) => {
   return (
     <motion.li
-      initial={{ opacity: 0, y: 10 }}                   
-      animate={{ opacity: 1, y: 0 }}                   
-      transition={{ delay: index * 0.05 }}             
-      onClick={() => navigate(`/dashboard/messages/thread/${message.id}`)} 
+      initial={{ opacity: 0, y: 10 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ delay }}
+      onClick={onClick}
       className={`p-5 rounded-md shadow border cursor-pointer transition hover:bg-gray-50 ${
         message.sender_role === "admin" ? "bg-blue-50" : "bg-white"
       }`}
