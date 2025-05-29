@@ -17,7 +17,6 @@ function AdminDashboard() {
   });
 
   const [notifications, setNotifications] = useState<any[]>([]);
-  const [setReadNotifications] = useState<any[]>([]);
 
   useEffect(() => {
     fetchStatistics();
@@ -45,11 +44,7 @@ function AdminDashboard() {
   const markAsRead = async (id: number) => {
     try {
       await api.put(`/admin/notifications/${id}/read`);
-      const note = notifications.find((n) => n.id === id);
-      setNotifications(notifications.filter((n) => n.id !== id));
-      if (note) {
-        setReadNotifications((prev) => [...prev, note]);
-      }
+      setNotifications((prev) => prev.filter((n) => n.id !== id));
     } catch {
       alert("Kunde inte markera som läst.");
     }
@@ -118,7 +113,9 @@ function AdminDashboard() {
                   <button
                     onClick={() => markAsRead(n.id)}
                     className="text-sm text-blue-700 cursor-pointer hover:underline"
-                  >📨 Läst</button>
+                  >
+                    📨 Läst
+                  </button>
                 </div>
               ))
             )}
