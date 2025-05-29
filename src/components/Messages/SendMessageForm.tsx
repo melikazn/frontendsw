@@ -8,6 +8,17 @@ interface Props {
   loading: boolean;
   status: string | null;
 }
+interface Props {
+  subject: string;
+  setSubject: (val: string) => void;
+  message: string;
+  setMessage: (val: string) => void;
+  onSubmit: () => void;
+  loading: boolean;
+  status: string | null;
+  onBack?: () => void; // 🛠 Lägg till denna rad
+}
+
 
 // Formulär för att skicka ett nytt meddelande till admin
 const SendMessageForm = ({
