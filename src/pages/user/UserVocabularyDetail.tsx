@@ -1,4 +1,3 @@
-// src/pages/user/UserVocabularyDetail.tsx
 import { useParams, useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
 import api from "../../api/axios";
@@ -15,7 +14,7 @@ function UserVocabularyDetail() {
 
   const fetchWordDetail = async () => {
     try {
-      const res = await api.get(`/users/vocabulary/detail/${id}`); // ✅ Rätt endpoint för användare
+      const res = await api.get(`/users/vocabulary/detail/${id}`); 
       setWord(res.data);
     } catch (err) {
       console.error("Kunde inte hämta orddetaljer:", err);
