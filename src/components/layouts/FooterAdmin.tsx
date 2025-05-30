@@ -1,6 +1,4 @@
-// Importerar useNavigate-hooken från React Router för att kunna navigera programatiskt
 import { useNavigate } from "react-router-dom";
-// Importerar ikoner från Font Awesome för e-post, telefon och plats
 import { FaEnvelope, FaPhone, FaMapMarkerAlt } from "react-icons/fa";
 
 export default function Footer() {
