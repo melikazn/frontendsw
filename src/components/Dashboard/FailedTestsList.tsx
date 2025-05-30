@@ -1,4 +1,3 @@
-// Importerar typen för testresultat
 import { TestResult } from "../../types";
 
 // Definierar props-typ: en lista med testresultat
@@ -8,7 +7,8 @@ interface Props {
 
 // Komponent som visar misslyckade tester
 const FailedTestsList = ({ tests }: Props) => (
-  <section data-aos="fade-up"> {/* För AOS-animation vid scroll */}
+  {/* För AOS-animation vid scroll */}
+  <section data-aos="fade-up"> 
     <h3 className="text-2xl font-semibold mb-6">🕓 Tester att förbättra</h3>
 
     <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
