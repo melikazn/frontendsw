@@ -1,4 +1,3 @@
-// Importerar typen för testresultat
 import { TestResult } from "../../types";
 
 // Props: lista med godkända tester
@@ -8,7 +7,7 @@ interface Props {
 
 // Komponent som visar tester där användaren fått godkänt
 const PassedTestsList = ({ tests }: Props) => (
-  <section className="mb-16" data-aos="fade-up"> {/* AOS-animation vid scroll */}
+  <section className="mb-16" data-aos="fade-up"> 
     <h3 className="text-2xl font-semibold mb-6">✅ Klarade tester</h3>
 
     <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
