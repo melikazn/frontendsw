@@ -1,10 +1,9 @@
-// src/pages/user/UserTests.tsx
 import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 import api from "../../api/axios";
 
 function UserTests() {
-  const { id } = useParams(); // sektionens id
+  const { id } = useParams(); 
   const [tests, setTests] = useState<any[]>([]);
   const [error, setError] = useState<string | null>(null);
 
