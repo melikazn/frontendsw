@@ -1,4 +1,3 @@
-// Komponent för att visa, redigera och lägga till frågor och svar i ett test
 import { useEffect, useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import api from "../../api/axios";
@@ -6,24 +5,16 @@ import api from "../../api/axios";
 function AddQuestions() {
   const { testId } = useParams();
   const navigate = useNavigate();
-
-  // State för befintliga frågor
   const [existingQuestions, setExistingQuestions] = useState<any[]>([]);
-
-  // State för redigering
   const [editingQuestionId, setEditingQuestionId] = useState<number | null>(null);
   const [editedText, setEditedText] = useState("");
   const [editedDescription, setEditedDescription] = useState("");
   const [editedAnswers, setEditedAnswers] = useState<string[]>(["", "", "", ""]);
   const [editedCorrectIndex, setEditedCorrectIndex] = useState<number | null>(null);
-
-  // State för ny fråga
   const [newQuestionText, setNewQuestionText] = useState("");
   const [description, setDescription] = useState("");
   const [newAnswers, setNewAnswers] = useState(["", "", "", ""]);
   const [newCorrectIndex, setNewCorrectIndex] = useState<number | null>(null);
-
-  // Meddelande för feedback
   const [message, setMessage] = useState<string | null>(null);
 
   // Hämta alla frågor för testet när komponenten laddas
@@ -88,7 +79,7 @@ function AddQuestions() {
     setNewAnswers(updated);
   };
 
-  // Skicka ny fråga + svar
+  // Skicka ny fråga och svar
   const submitNewQuestion = async (e: React.FormEvent) => {
     e.preventDefault();
     if (newCorrectIndex === null) {
@@ -188,7 +179,7 @@ function AddQuestions() {
                 </div>
               </div>
             ) : (
-              // Visningsläge
+
               <>
                 <p className="font-semibold">{index + 1}. {q.question_text}</p>
                 {q.description && (
