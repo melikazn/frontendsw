@@ -6,9 +6,9 @@ import Dropdown from "../../components/General/Dropdown";
 
 // Komponent för att skapa en ny sektion kopplad till en kategori och nivå
 function AddSection() {
-  const [categories, setCategories] = useState<any[]>([]); // Lista över kategorier från backend
-  const [form, setForm] = useState({ category_name: "", name: "", level: "" }); // Formulärdata
-  const [message, setMessage] = useState<string | null>(null); // Feedbackmeddelande
+  const [categories, setCategories] = useState<any[]>([]);
+  const [form, setForm] = useState({ category_name: "", name: "", level: "" }); 
+  const [message, setMessage] = useState<string | null>(null); 
   const navigate = useNavigate();
 
   // Hämta tillgängliga kategorier vid första render
@@ -27,9 +27,9 @@ function AddSection() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     try {
-      const res = await api.post("/admin/sections", form); // Skapa ny sektion i backend
+      const res = await api.post("/admin/sections", form);
       setMessage(res.data.message || "Sektion skapad.");
-      setTimeout(() => navigate("/admin/sections"), 1500); // Navigera efter 1,5 sek
+      setTimeout(() => navigate("/admin/sections"), 1500);
     } catch (err: any) {
       setMessage(err.response?.data?.message || "❌ Något gick fel.");
     }
