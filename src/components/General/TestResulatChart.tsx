@@ -1,4 +1,3 @@
-// Importerar komponenter från Recharts för att skapa cirkeldiagram
 import { PieChart, Pie, Cell, Tooltip, Legend, ResponsiveContainer } from "recharts";
 
 // Props: antal rätta svar och totala frågor
@@ -22,7 +21,6 @@ const TestResultChart = ({ correct, total }: Props) => {
     <div className="bg-white p-6 rounded shadow mb-10">
       <h3 className="text-xl font-semibold mb-4">📊 Rätt vs. fel</h3>
 
-      {/* Diagramcontainer med fast höjd */}
       <div className="w-full h-[300px]">
         <ResponsiveContainer width="100%" height="100%">
           <PieChart>
@@ -35,7 +33,7 @@ const TestResultChart = ({ correct, total }: Props) => {
               outerRadius={100}   
               label               
             >
-              {/* Färglägg varje segment */}
+
               {data.map((_entry, index) => (
                 <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
               ))}
