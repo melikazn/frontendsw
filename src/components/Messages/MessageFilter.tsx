@@ -1,5 +1,3 @@
-
-// Importerar Listbox-komponent och ikon för dropdown-pil
 import { Listbox } from "@headlessui/react";
 import { ChevronUpDownIcon } from "@heroicons/react/20/solid";
 
