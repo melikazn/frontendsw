@@ -1,4 +1,3 @@
-// Importerar typen för användare
 import { User } from "../../types";
 
 // Props: en användare
@@ -20,11 +19,11 @@ const ProfileInfo = ({ user }: Props) => (
         className="w-24 h-24 rounded-full object-cover border shadow-md"
       />
     ) : (
-      // Annars visa fallback-text
+      // Annars 
       <p className="italic">📷 Ingen profilbild uppladdad.</p>
     )}
 
-    {/* Visar användarens nuvarande nivå */}
+    {/* visar användarens nivå */}
     <p className="text-lg font-medium">
       🎯 Din nuvarande nivå: <span className="font-semibold">{user.level}</span>
     </p>
