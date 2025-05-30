@@ -1,4 +1,3 @@
-// Importerar hjärtikon från react-icons
 import { FaHeart } from "react-icons/fa";
 
 // Typ för felaktigt besvarade ord
