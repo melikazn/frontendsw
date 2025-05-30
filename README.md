@@ -1,6 +1,5 @@
 
-# 🇸🇪 Swedish Learning App
-
+# 🇸🇪 Swedish For All - Frontend
 En fullständig webbapplikation byggd för att hjälpa persisktalande användare att lära sig svenska – med stöd för ordförråd, quiz, tester, videolektioner, forum, och meddelanden. Appen är uppdelad i användar-, admin- och gästdelar.
 
 ---
