@@ -1,4 +1,3 @@
-// Props: aktuell textsvar, setter-funktion, submit-funktion och valfri disable-flagga
 interface Props {
   newReply: string;
   setNewReply: (value: string) => void;
