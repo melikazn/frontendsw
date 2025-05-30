@@ -1,4 +1,3 @@
-// Importerar komponenter från Recharts för att rita linjediagram
 import {
   LineChart,
   Line,
@@ -11,7 +10,7 @@ import {
 
 // Props: data för tidigare quizresultat
 interface Props {
-  data: { name: string; score: number }[]; // name = datum/titel, score = procent
+  data: { name: string; score: number }[]; 
 }
 
 // Visar en linjegraf över tidigare quizresultat
