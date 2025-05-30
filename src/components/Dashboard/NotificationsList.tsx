@@ -1,7 +1,6 @@
-// Importerar typen för notifikationer
 import { Notification } from "../../types";
 
-// Props: en lista med notifikationer + en funktion för att markera som läst
+// Props: en lista med notifikationer och en funktion för att markera som läst
 interface Props {
   notifications: Notification[];
   onMarkAsRead: (id: number) => void;
@@ -9,7 +8,7 @@ interface Props {
 
 // Komponent som visar en lista med notifikationer
 const NotificationsList = ({ notifications, onMarkAsRead }: Props) => (
-  <section className="mb-16" data-aos="fade-up"> {/* AOS-animation */}
+  <section className="mb-16" data-aos="fade-up"> 
     <h3 className="text-2xl font-semibold mb-6">🔔 Notifikationer</h3>
 
     <div className="grid gap-4">
