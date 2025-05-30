@@ -15,5 +15,5 @@ export default function Footer() {
   // Rendera rätt footer beroende på roll
   if (isAdmin) return <FooterAdmin />;
   if (isUser) return <FooterUser />;
-  return <FooterGuest />; // Standardfooter för besökare
+  return <FooterGuest />;
 }
