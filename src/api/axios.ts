@@ -1,6 +1,6 @@
 import axios from "axios";
 
-// Skapar en axios-instans med grund-URL 
+// Skapar en axios-instans 
 const api = axios.create({
   baseURL: "http://localhost:5050/api",
   withCredentials: true,
