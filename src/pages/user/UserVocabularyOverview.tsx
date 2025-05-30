@@ -26,7 +26,7 @@ function UserVocabularyOverview() {
       setError(null);
       setSelectedWordClass("");
       setSelectedLevel("");
-      setCurrentPage(1); // Återställ till första sidan vid ny sökning
+      setCurrentPage(1); 
     } catch (err) {
       console.error("Fel vid sökning:", err);
       setError("Det gick inte att söka efter ord.");
