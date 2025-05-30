@@ -1,8 +1,5 @@
-// useNavigate och useLocation används för att navigera och identifiera aktiv sida
 import { useNavigate, useLocation } from "react-router-dom";
-// useRef, useState, useEffect används för menylogik och animation
 import { useRef, useState, useEffect } from "react";
-// X-ikonen från lucide-react används som stängningsknapp i mobilmenyn
 import { X } from "lucide-react";
 
 export default function HeaderUser() {
