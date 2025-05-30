@@ -1,4 +1,3 @@
-// Importerar motion för animering och useNavigate för routing
 import { motion } from "framer-motion";
 
 // Props: ett meddelande, klickfunktion och animationsfördröjning
