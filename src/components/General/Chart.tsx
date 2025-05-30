@@ -32,7 +32,7 @@ const Chart = ({ data, xKey, yKeys, height = 350, title }: Props) => {
 
   return (
     <section className="mb-16">
-      {/* Visa rubrik om den finns */}
+      
       {title && <h3 className="text-2xl font-semibold mb-6">{title}</h3>}
 
       <div className="w-full 2xl:w-[90%] mx-auto h-[350px] bg-white rounded-xl shadow p-4">
