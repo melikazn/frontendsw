@@ -1,4 +1,3 @@
-// 📁 src/pages/user/UserForum.tsx
 import { useEffect, useState } from "react";
 import api from "../../api/axios";
 import AOS from "aos";
