@@ -4,7 +4,7 @@ import api from "../../api/axios";
 import Pagination from "../../components/General/Pagination";
 
 function SectionVideoList() {
-  const { id } = useParams(); // sectionId
+  const { id } = useParams();
   const navigate = useNavigate();
   const [videos, setVideos] = useState<any[]>([]);
   const [error, setError] = useState<string | null>(null);
