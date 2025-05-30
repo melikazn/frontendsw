@@ -1,54 +1,102 @@
-# React + TypeScript + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# 🇸🇪 Swedish Learning App
 
-Currently, two official plugins are available:
+En fullständig webbapplikation byggd för att hjälpa persisktalande användare att lära sig svenska – med stöd för ordförråd, quiz, tester, videolektioner, forum, och meddelanden. Appen är uppdelad i användar-, admin- och gästdelar.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## Expanding the ESLint configuration
+## 📂 Projektstruktur
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+```bash
+├── public/                     # Statisk publikt innehåll -  bilder
+├── src/
+│   ├── api/                    # Axios-inställningar och API-anrop
+│   ├── components/             # Återanvändbara komponenter
+│   ├── pages/                  # Sidkomponenter (user/admin/guest)
+│   ├── routes/                 # Skyddade routes
+│   ├── types.ts                # Globala TypeScript-typer
+│   └── App.tsx / main.tsx      # Entry points
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+---
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## 🚀 Funktioner
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
+### 👤 Gäst
+- Utforska ordförråd per CEFR-nivå (A1–C1)
+- Se ordlistor per bokstav och detaljer per ord
+
+### 🧑‍🎓 Användare (student)
+- Visa och favoritmarkera ord
+- Genomföra ordförrådsquiz med resultat och felanalys
+- Genomföra tester ( max 20 frågor, 70% rätt krävs för godkänt)
+- Se testresultat och progression
+- Titta på videolektioner per nivå, kategori och sektion
+- Spara favoritvideor
+- Använda forum (skriva frågor och svar)
+- Skicka privata meddelanden till admin
+- Få notifikationer och globala meddelanden
+
+### 🛠 Admin
+- Hantera ordförråd (CRUD)
+- Hantera kategorier och sektioner
+- Skapa tester och frågor (med feedbacktext)
+- Ladda upp videolektioner
+- Se och svara på foruminlägg
+- Se och svara på privata meddelanden
+- Skicka globala meddelanden
+- Se statistik i admin dashboard
+
+---
+
+## 🧰 Tekniker
+
+- **Frontend:** React + TypeScript + Vite
+- **Routing:** React Router
+- **Stil:** Tailwind CSS + Material Tailwind
+- **API-hantering:** Axios
+- **Animering:** Framer Motion
+- **Notifiering:** React Toastify
+- **Autentisering:** JWT via backend
+- **Videohantering:** Lokalt
+
+---
+
+## 📦 Installation
+
+```bash
+# Klona projektet
+git clone https://github.com/ditt-namn/swedish-app-frontend.git
+cd swedish-app-frontend
+
+# Installera beroenden
+npm install
+
+# Starta utvecklingsservern
+npm run dev
 ```
+
+Backend måste vara igång på exempelvis `http://localhost:5050`.
+
+---
+
+
+## ✅ TODO (för framtida förbättringar)
+
+- [ ] Bättre akritektur 
+- [ ] Flerspråklighet
+- [ ] Betalningsfunktion
+
+---
+
+## 📄 Licens
+
+Detta projekt är privat och inte open source.
+
+---
+
+## ✍️ Utvecklat av
+
+Melika Zolfagharian  
+Swedish language tutor & webbutvecklare  
+Mittuniversitetet – Fullstackprojekt 2025
