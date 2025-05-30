@@ -1,4 +1,3 @@
-// Importerar framer-motion för enkel animationshantering
 import { motion } from "framer-motion";
 
 // Typdefinition för ett enskilt svar i tråden
@@ -32,7 +31,7 @@ const MessageReplyThread = ({ replies }: Props) => {
               ? "bg-blue-50 border border-blue-200"
               : "bg-yellow-50 border border-yellow-200"
           }`}
-          // In-animation vid rendering
+
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.4 }}
