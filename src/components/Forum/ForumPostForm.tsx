@@ -1,4 +1,3 @@
-// Props: innehåller nuvarande inlägg, en setter-funktion och en submit-funktion
 interface Props {
   newPost: { title: string; content: string };
   setNewPost: (post: { title: string; content: string }) => void;
